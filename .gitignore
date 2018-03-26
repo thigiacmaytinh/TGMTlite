@@ -3,3 +3,5 @@
 *.obj
 *.log
 *.pdb
+/TGMTtemplate/obj/x64/Debug/TGMTtemplate.tlog/*.tlog
+*.tlog

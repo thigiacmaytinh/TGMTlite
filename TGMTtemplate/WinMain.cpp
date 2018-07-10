@@ -44,7 +44,7 @@ void main(int argc, char** argv)
 	std::vector<std::string> imagePaths = TGMTfile::GetImageFilesInDir(TGMTfile::GetCurrentDir());
 	ASSERT(imagePaths.size() > 0, "Can not load any image");
 
-	cv::Mat mat = cv::imread(imagePaths[0]);
+	mat = cv::imread(imagePaths[0]);
 	ASSERT(mat.data, "Can not load image");
 
 	cv::cvtColor(mat, mat, cv::COLOR_BGR2GRAY);
@@ -56,6 +56,9 @@ void main(int argc, char** argv)
 	cv::imshow("brain", mat);
 
 	BrainHemorrhageOnTrackbar(0, nullptr);
+
+	cv::waitKey();
+	getchar();
 }
 
 

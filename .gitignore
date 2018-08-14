@@ -5,3 +5,6 @@
 *.pdb
 /TGMTtemplate/obj/x64/Debug/TGMTtemplate.tlog/*.tlog
 *.tlog
+*.ilk
+*.ipdb
+*.opendb

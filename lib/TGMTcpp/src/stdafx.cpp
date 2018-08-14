@@ -1,14 +1,19 @@
 #include "stdafx.h"
+#if defined(WIN32) || defined(WIN64)
 #include <windows.h>
 #include <time.h>
+#endif
 
 #ifndef _MANAGED
 #include <future>
 #endif
+#ifdef OS_LINUX
+#include <stdarg.h>
+#endif
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-void OnEvent(int event, int x, int y, int flags, void* userdata)
+void OnMouseEvent(int event, int x, int y, int flags, void* userdata)
 {
 	switch (event)
 	{
@@ -42,9 +47,9 @@ void OnEvent(int event, int x, int y, int flags, void* userdata)
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #ifdef _MANAGED
-void DebugImage(cv::Mat img, std::string str)
+void ShowImage(cv::Mat img, std::string str)
 #else
-void DebugImage(cv::Mat img, const char* fmt, ...)
+void ShowImage(cv::Mat img, const char* fmt, ...)
 #endif
 {
 #ifndef _MANAGED
@@ -53,15 +58,13 @@ void DebugImage(cv::Mat img, const char* fmt, ...)
 	va_start(arg_list, fmt);
 	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
 #endif
-	cv::namedWindow(str);
-
-	cv::setMouseCallback(str, OnEvent, NULL);
 	cv::imshow(str, img);
 
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+#ifndef _MANAGED
 void WriteImageAsync(cv::Mat img, const char* fmt, ...)
 {
 	va_list arg_list;
@@ -70,6 +73,7 @@ void WriteImageAsync(cv::Mat img, const char* fmt, ...)
 	vsnprintf(str, DEBUG_OUT_BUFFER_SIZE - 1, fmt, arg_list);
 	std::future<void> result = std::async([](char* chr, cv::Mat mat) {cv::imwrite(chr, mat); }, str, img);	
 }
+#endif
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

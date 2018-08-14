@@ -3,11 +3,11 @@
 
 #include "stdafx.h"
 #include <tchar.h>
+#include "CameraExample.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	cv::Mat mat = cv::imread("lena.jpg");
-	cv::imshow("Lena", mat);
+	CameraExample::main(argc, argv);
 
 	cv::waitKey();
 	getchar();

@@ -24,9 +24,45 @@
     <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp">
       <Filter>TGMT</Filter>
     </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTcamera.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTConfig.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTcamera.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraExample.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTConfig.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h">
       <Filter>TGMT</Filter>
     </ClInclude>
   </ItemGroup>

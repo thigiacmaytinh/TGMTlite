@@ -1,8 +1,7 @@
 #pragma once
 #include <iostream>
 
-#include <opencv2\opencv.hpp>
-#include <opencv2\core.hpp>
+#include <opencv2/opencv.hpp>
 
 #define DEBUG_OUT_BUFFER_SIZE			(64*1024)
 
@@ -17,7 +16,7 @@
 #define DEBUG_INFO(FORMAT, ...)
 #endif
 
-#ifdef WIN32
+#if defined(WIN32) || defined(WIN64)
 #ifdef _MANAGED
 	void DebugImage(cv::Mat img, std::string str);
 	#define DEBUG_IMAGE(img, ...)
@@ -25,19 +24,21 @@
 	void WriteImage(cv::Mat img, std::string str);
 	#define WRITE_IMAGE(img, str) WriteImage(img, str)
 #else
-	#if _DEBUG
-		void DebugImage(cv::Mat img, const char* fmt, ...);
-		#define DEBUG_IMAGE(img, ...) DebugImage(img, __VA_ARGS__)		
+	void ShowImage(cv::Mat img, const char* fmt, ...);
+	#if defined(_DEBUG)		
+		#define DEBUG_IMAGE(img, ...) ShowImage(img, __VA_ARGS__)		
 	#else
 		#define DEBUG_IMAGE(img, ...)
 	#endif
 	void WriteImage(cv::Mat img, const char* fmt, ...);
 	void WriteImageAsync(cv::Mat img, const char* fmt, ...);
 	#define WRITE_IMAGE(img, ...) WriteImage(img, __VA_ARGS__)
+	#define WRITE_IMAGE_ASYNC(img, ...) WriteImageAsync(img, __VA_ARGS__)
 #endif
 #else
 	#define WRITE_IMAGE(img, ...)
 	#define DEBUG_IMAGE(img, ...)
+	#define WRITE_IMAGE_ASYNC(img, ...)
 #endif
 void PrintFPS(cv::Mat& img);
 #define PRINT_FPS PrintFPS
@@ -82,3 +83,22 @@ void PrintFPS(cv::Mat& img);
 #define WHITE cv::Scalar(255,255,255)
 #define YELLOW cv::Scalar(0,255,255)
 #define UNDEFINED_COLOR cv::Scalar(-1,-1,-1)
+
+#define MAX_PATH    260
+
+#define KEY_ESC 27
+#define KEY_SPACE 32
+#define KEY_ENTER 13
+#define KEY_DELETE 3014656
+#define KEY_INSERT 2949120
+#define KEY_HOME 2359296
+#define KEY_END 2293760
+#define KEY_PAGE_UP 2162688
+#define KEY_PAGE_DOWN 2228224
+#define KEY_UP 2490368
+#define KEY_LEFT 2424832
+#define KEY_DOWN 2621440
+#define KEY_RIGHT 2555904
+#define KEY_F1 7340032
+#define KEY_F2 7405568
+#define KEY_F3 7471104

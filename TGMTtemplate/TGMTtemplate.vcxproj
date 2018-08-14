@@ -88,10 +88,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\lib\TGMTcpp\src\stdafx.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTcamera.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTConfig.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdebugger.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp" />
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTutil.cpp" />
+    <ClCompile Include="CameraExample.cpp" />
     <ClCompile Include="WinMain.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTcamera.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTConfig.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdebugger.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h" />
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTutil.h" />
+    <ClInclude Include="CameraExample.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

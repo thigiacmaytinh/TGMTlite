@@ -27,9 +27,6 @@
     <ClCompile Include="..\lib\TGMTcpp\src\TGMTcamera.cpp">
       <Filter>TGMT</Filter>
     </ClCompile>
-    <ClCompile Include="CameraExample.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\lib\TGMTcpp\src\TGMTConfig.cpp">
       <Filter>TGMT</Filter>
     </ClCompile>
@@ -42,6 +39,21 @@
     <ClCompile Include="..\lib\TGMTcpp\src\TGMTfile.cpp">
       <Filter>TGMT</Filter>
     </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTobjDetect.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTdraw.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTshape.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTimage.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\lib\TGMTcpp\src\TGMTcolor.cpp">
+      <Filter>TGMT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\lib\TGMTcpp\src\stdafx.h">
@@ -49,9 +61,6 @@
     </ClInclude>
     <ClInclude Include="..\lib\TGMTcpp\src\TGMTcamera.h">
       <Filter>TGMT</Filter>
-    </ClInclude>
-    <ClInclude Include="CameraExample.h">
-      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="..\lib\TGMTcpp\src\TGMTConfig.h">
       <Filter>TGMT</Filter>
@@ -63,6 +72,21 @@
       <Filter>TGMT</Filter>
     </ClInclude>
     <ClInclude Include="..\lib\TGMTcpp\src\TGMTfile.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTobjDetect.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTdraw.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTshape.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTimage.h">
+      <Filter>TGMT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\TGMTcpp\src\TGMTcolor.h">
       <Filter>TGMT</Filter>
     </ClInclude>
   </ItemGroup>

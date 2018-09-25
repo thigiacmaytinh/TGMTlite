@@ -32,7 +32,7 @@ void OnCameraFrames(std::vector<cv::Mat> frames)
 		if (autoCapture && clock() - _time > interval)
 		{
 			_time = clock();
-			WriteImage(frames[i], TGMTutil::FormatString("img\\%d.jpg", _time).c_str());
+			WriteImage(frames[i], ("img\\" + GetCurrentDateTime(true) + TGMTutil::FormatString("%d.jpg", _time)).c_str());
 		}
 		ShowImage(frames[i], "frame_%d", i);
 		OnKeyEvent(cv::waitKey(1));
